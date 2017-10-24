@@ -1,0 +1,30 @@
+nav {
+    background-color: transparent;
+    box-shadow: rgba(0, 0, 0, 0.14) 0px 1px 1px 0px !important;
+}
+
+nav a {
+    color: #34c3c8 !important;
+}
+
+nav #nav-image {
+    width: 190px;
+    vertical-align: sub;
+    margin-left: 15px;
+}
+
+#btnMenu {
+    color: #34c3c8;
+    margin-left: 15px;
+}
+
+#backMenu {
+    background: url(/assets/img/fundo_menu.jpg) no-repeat center;
+    background-size: cover;
+}
+
+#imgFotoPerfil {
+    box-shadow: 1px 1px 6px 5px #dae8f1;
+}
+
+
