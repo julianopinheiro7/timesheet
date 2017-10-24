@@ -19,12 +19,10 @@ nav #nav-image {
 }
 
 #backMenu {
-    background: url(/assets/img/fundo_menu.jpg) no-repeat center;
+    background: url(/assets/img/background.jpg) no-repeat center;
     background-size: cover;
 }
 
-#imgFotoPerfil {
-    box-shadow: 1px 1px 6px 5px #dae8f1;
-}
+
 
 
