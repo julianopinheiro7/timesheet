@@ -2,23 +2,23 @@
       
   <table class="striped responsive-table">
     <thead>
+      <th>Chamado</th>
       <th>Data da Tarefa</th>
       <th>Solicitante</th>
       <th>Projeto</th>
       <th>Descrição</th>
-      <th>Status</th>
-      <th>Chamado</th>
+      <th>Status</th>      
     </thead>
     <tbody>
       <tr *ngFor="let tarefa of tarefas">
-          <td>{{tarefa.data}}</td>
+          <a href="#!" style="text-align: center;">
+              <b><td>{{tarefa.chamado}}</td></b>
+          </a>          
+          <td>{{tarefa.data | date: 'dd/MM/yyyy'}}</td>
           <td>{{tarefa.solicitante}}</td>
           <td>{{tarefa.projeto}}</td>
           <td>{{tarefa.descricao}}</td>
-          <td>{{tarefa.status}}</td>
-          <a href="#!" style="text-align: center;">
-            <b><td>{{tarefa.chamado}}</td></b>
-          </a>          
+          <td>{{tarefa.status}}</td>          
       </tr>
     </tbody>  
   </table>
