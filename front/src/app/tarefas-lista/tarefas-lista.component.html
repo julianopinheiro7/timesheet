@@ -7,7 +7,8 @@
       <th>Solicitante</th>
       <th>Projeto</th>
       <th>Descrição</th>
-      <th>Status</th>      
+      <th>Status</th>   
+      <th>Tempo</th>   
     </thead>
     <tbody>
       <tr *ngFor="let tarefa of tarefas">
@@ -19,6 +20,7 @@
           <td>{{tarefa.projeto}}</td>
           <td>{{tarefa.descricao}}</td>
           <td>{{tarefa.status}}</td>          
+          <td>{{tarefa.tempo}}</td>          
       </tr>
     </tbody>  
   </table>

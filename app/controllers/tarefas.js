@@ -5,8 +5,7 @@ module.exports = function(app) {
     
        controller.listar = function(req, res) {
        
-        tarefas.find().exec()
-        .then(
+        tarefas.find().exec().then(
              function(tarefas) {       // Callback se der certo
                 res.json(tarefas);
              },

@@ -3,6 +3,9 @@ var mongoose = require('mongoose');
 module.exports = function() {
 
    var schema = mongoose.Schema({
+      chamado: {
+        type: Number
+      },  
       data: {
          type: Date,
          required: true
@@ -22,10 +25,7 @@ module.exports = function() {
       status: {
         type: String,
         required: true
-      },
-      chamado: {
-         type: Number
-      },
+      },      
       tempo: {
         type: Number
      }
