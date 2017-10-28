@@ -1,6 +1,6 @@
 <div class="container">
       
-  <table class="striped responsive-table">
+  <table class="responsive-table">
     <thead>
       <th>Chamado</th>
       <th>Data da Tarefa</th>
@@ -11,10 +11,12 @@
       <th>Tempo</th>   
     </thead>
     <tbody>
-      <tr *ngFor="let tarefa of tarefas">
-          <a href="#!" style="text-align: center;">
-              <b><td>{{tarefa.chamado}}</td></b>
-          </a>          
+      <tr *ngFor="let tarefa of tarefas" id="linha">
+          <div class="center">
+              <a href="#!">
+                  <b><td>{{tarefa.chamado}}</td></b>
+              </a>          
+          </div>          
           <td>{{tarefa.data | date: 'dd/MM/yyyy'}}</td>
           <td>{{tarefa.solicitante}}</td>
           <td>{{tarefa.projeto}}</td>
