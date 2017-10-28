@@ -3,10 +3,6 @@ nav {
     box-shadow: rgba(0, 0, 0, 0.14) 0px 1px 1px 0px !important;
 }
 
-nav a {
-    color: #34c3c8 !important;
-}
-
 nav #nav-image {
     width: 190px;
     vertical-align: sub;
@@ -23,6 +19,18 @@ nav #nav-image {
     background-size: cover;
 }
 
+#divExit {    
+    position: relative;
+    right: 20px;
+}
+
+#btnExit {
+    color: #767676;
+}
+
+#btnExit:hover {
+    color: #34c3c8;
+}
 
 
 
