@@ -25,11 +25,11 @@ export class TarefasService {
   public salvar(dados: Tarefa) {
     //Tarefa já existente.
     if(dados._id) {
-      return this.http.post('http://localhost:3000/tarefas', dados);
+      return this.http.put('http://localhost:3000/tarefas', dados);
     }
     // Tarefa nova
     else { 
-      return this.http.put('http://localhost:3000/tarefas', dados);
+      return this.http.post('http://localhost:3000/tarefas', dados);
     }
   }
 

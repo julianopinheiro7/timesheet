@@ -23,7 +23,8 @@ module.exports = function() {
         required: true
       },
       status: {
-        type: String,
+        type: mongoose.Schema.ObjectId,
+        ref: 'status',
         required: true
       },      
       tempo: {

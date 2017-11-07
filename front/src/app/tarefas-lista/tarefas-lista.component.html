@@ -8,21 +8,29 @@
       <th>Projeto</th>
       <th>Descrição</th>
       <th>Status</th>   
-      <th>Tempo</th>   
+      <th>Tempo</th>      
+      <th></th>   
     </thead>
     <tbody>
       <tr *ngFor="let tarefa of tarefas" id="linha">
-          <div class="center">
-              <a href="#!">
-                  <b><td>{{tarefa.chamado}}</td></b>
-              </a>          
-          </div>          
+          <td>
+              <div class="center">
+                  <a [routerLink]="['/tarefas', tarefa._id]">
+                    {{tarefa.chamado}}
+                  </a>        
+              </div>          
+          </td>          
           <td>{{tarefa.data | date: 'dd/MM/yyyy'}}</td>
           <td>{{tarefa.solicitante}}</td>
           <td>{{tarefa.projeto}}</td>
           <td>{{tarefa.descricao}}</td>
-          <td>{{tarefa.status}}</td>          
-          <td>{{tarefa.tempo}}</td>          
+          <td>{{tarefa.status.descricao}}</td>          
+          <td>{{tarefa.tempo}}</td>   
+          <td>
+            <button class="btn-flat" (click)="excluir(tarefa._id)">
+              <i id="btnExcluir" class="material-icons">close</i>
+            </button>
+          </td>       
       </tr>
     </tbody>  
   </table>

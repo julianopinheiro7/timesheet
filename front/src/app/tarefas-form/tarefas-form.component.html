@@ -1,0 +1,51 @@
+<div class="container" style="margin-top: 50px;">
+<div class="row">
+<form #tarefasForm="ngForm" (ngSubmit)="enviar()">
+      
+      <div class="input-field col s4">
+        <input id="chamado" name="chamado" type="text" class="validate" [(ngModel)]="model.chamado">
+        <label for="chamado">Num. Chamado</label>
+      </div>
+
+      <div class="input-field col s4">
+        <input id="data_tarefa" name="data" type="text" class="validate" [(ngModel)]="model.data">
+        <label for="data_tarefa">Data da tarefa</label>
+      </div>
+
+      <div class="input-field col s8">
+        <input id="solicitante" type="text" name="solicitante" class="validate" [(ngModel)]="model.solicitante">
+        <label for="solicitante">Solicitante</label>
+      </div>
+
+      <div class="input-field col s8">
+        <input id="projeto" type="text" name="projeto" class="validate" [(ngModel)]="model.projeto">
+        <label for="projeto">Projeto</label>
+      </div>
+
+      <div class="input-field col s12">
+        <input id="descricao" type="text" name="descricao" class="validate" [(ngModel)]="model.descricao">
+        <label for="descricao">Descrição</label>
+      </div>
+
+      <div class="input-field col s6">
+        <select id="status" name="status" [(ngModel)]="model.status">
+          <!-- <option value="" disabled>(Selecione)</option> -->
+          <option *ngFor="let sta of status | async" [ngValue]="sta._id">{{sta.descricao}}</option>
+        </select>
+        <label for="status">Status</label>
+      </div>
+
+      <div class="input-field col s2">
+        <input id="tempo" type="text" name="tempo" class="validate" [(ngModel)]="model.tempo">
+        <label for="tempo">Tempo</label>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input type="submit" class="waves-effect waves-light btn" value="Enviar" />
+        </div>
+      </div>
+
+  </form>
+  </div>
+</div>

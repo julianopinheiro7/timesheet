@@ -1,7 +1,7 @@
 import { Routes, RouterModule } from '@angular/router'
 
-//import { AppComponent } from './app.component'
 import { TarefasListaComponent } from './tarefas-lista/tarefas-lista.component'
+import { TarefasFormComponent } from './tarefas-form/tarefas-form.component'
 import { HomeComponent } from './home/home.component'
 
 const routes : Routes = [
@@ -22,7 +22,17 @@ const routes : Routes = [
    {
       path: 'tarefas',
       component: TarefasListaComponent
-   }
+   },
+
+   {
+    path: 'tarefas/novo',
+    component: TarefasFormComponent
+    },
+
+    {
+        path: 'tarefas/:id',
+        component: TarefasFormComponent
+    }
 
 ]
 
