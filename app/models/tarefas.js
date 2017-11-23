@@ -7,7 +7,7 @@ module.exports = function() {
         type: Number
       },  
       data: {
-         type: Date,
+         type: String,
          required: true
       },
       solicitante: {
@@ -23,7 +23,7 @@ module.exports = function() {
         required: true
       },
       status: {
-        type: mongoose.Schema.ObjectId,
+        type: mongoose.Schema.ObjectId,        
         ref: 'status',
         required: true
       },      
@@ -32,6 +32,6 @@ module.exports = function() {
      }
    });
 
-   return mongoose.model('tarefas', schema);
+   return mongoose.model('tarefa', schema);
 
 }

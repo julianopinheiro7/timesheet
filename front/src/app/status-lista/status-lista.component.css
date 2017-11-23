@@ -1,0 +1,25 @@
+#status {
+    margin-top: 25px;
+}
+
+#tbStatus {
+    margin-top: 50px;
+    width: 450px;
+}
+
+#tbDescricao {
+    width: 300px;
+}
+
+.btnOp {
+    font-size: 1.6rem !important;
+    color: #9e9e9e;      
+}
+
+.btnLink {
+    padding: 0 15px !important;
+}
+
+.btnOp:hover {
+    color: #34c3c8;
+}

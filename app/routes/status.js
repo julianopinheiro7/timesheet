@@ -5,4 +5,6 @@ module.exports = function(app) {
     app.get('/status', controller.listar);
     app.get('/status/:id', controller.obterUm);
     app.delete('/status/:id', controller.excluir);
+    app.post('/status', controller.novo);
+    app.put('/status', controller.atualizar);
  }

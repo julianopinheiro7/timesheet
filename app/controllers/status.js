@@ -48,6 +48,35 @@ module.exports = function(app) {
             res.status(404).send('Status para exclusão não encontrado');
          }
     }
+
+    controller.novo = function (req, res) {
+        console.log(req.body);
+
+        status.create(req.body).then(
+            function (result) {
+                res.status(201).json(result);
+            },
+            function (erro) {
+                console.error(erro);
+                res.status(500).json(erro);
+            }
+        )
+    }
+
+    controller.atualizar = function (req, res) {
+
+        var idStatus = req.body._id;
+
+        status.findByIdAndUpdate(idStatus, req.body).then(
+            function (status) {
+                res.status(200).json(status);
+            },
+            function (erro) {
+                console.error(erro);
+                res.status(404).json('Status não encontrado para atualizar');
+            }
+        )
+    }
     
     return controller;
     

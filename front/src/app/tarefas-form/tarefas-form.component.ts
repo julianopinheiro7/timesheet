@@ -40,12 +40,14 @@ export class TarefasFormComponent implements OnInit {
   }
 
   enviar() {
+    
+    console.log(this.model);
 
     let roteador = this.router;
     this.ts.salvar(this.model).subscribe(
       function (dados) {
         console.log(dados)
-        roteador.navigate(['/tarefas']);
+        // roteador.navigate(['/tarefas']);
       },
       function (erro) {
         //

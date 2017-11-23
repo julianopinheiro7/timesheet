@@ -1,0 +1,23 @@
+<div class="container" id="status">
+    
+<h5>Lista de Status</h5>
+
+<table class="responsive-table striped" id="tbStatus">
+  <thead>
+    <th>Descrição</th>
+    <th>Editar</th>   
+    <th>Excluir</th>   
+  </thead>
+  <tbody>
+    <tr *ngFor="let sta of status" id="linha">
+        <td id="tbDescricao">{{sta.descricao}}</td>        
+        <td class="sizeOp">
+          <a class="btn-flat btnLink" [routerLink]="['/status', status._id]"><i class="material-icons btnOp">edit</i></a>
+        </td>                            
+        <td class="sizeOp">
+          <a class="btn-flat btnLink" (click)="excluir(status._id)"><i class="material-icons btnOp">close</i></a>
+        </td>       
+    </tr>
+  </tbody>  
+</table>
+</div>

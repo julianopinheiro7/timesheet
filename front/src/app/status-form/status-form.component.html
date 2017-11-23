@@ -1,0 +1,22 @@
+<div class="container" style="margin-top: 50px;">
+    <div class="row">
+      <form materialize #statusForm="ngForm" (ngSubmit)="enviar()">
+
+        <h5>Cadastro de Status</h5>
+  
+        <div class="input-field col s4">
+          <input id="descricao" name="descricao" type="text" class="validate" [(ngModel)]="model.descricao">
+          <label for="descricao">Descrição</label>
+        </div>  
+        
+        <div class="row">
+          <div class="input-field col s12">
+            <input type="submit" class="waves-effect waves-light btn" value="Enviar" />
+          </div>
+        </div>
+  
+      </form>
+    </div>
+  </div>
+  
+  

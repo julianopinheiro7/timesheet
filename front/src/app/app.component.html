@@ -1,4 +1,4 @@
-<nav>
+<!-- <nav>
   <div class="nav-wrapper">
     <a href="#" materialize="sideNav" id="btnMenu" data-activates="slide-out">
       <i class="material-icons">menu</i>
@@ -12,14 +12,15 @@
       </a>
     </div>
   </div>
-</nav>
+</nav> -->
+
 
 <ul id="slide-out" class="side-nav">
   <li>
     <div class="user-view">
       <div class="background" id="backMenu"></div>
       <a href="#!user">
-        <img class="circle" src="assets/img/perfil.png">
+        <img class="circle" id="logo" src="assets/img/logo.png">
       </a>
       <a href="#!name">
         <span class="white-text name">Juliano Pinheiro</span>
@@ -42,7 +43,7 @@
       <i class="material-icons">&#xE85D;</i>Projetos</a>
   </li>
   <li>
-    <a href="#!">
+    <a href="/status">
       <i class="material-icons">&#xE86C;</i>Status</a>
   </li>
   <li>
@@ -64,7 +65,7 @@
   <ul>
     <!-- <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li> -->
     <li>
-      <a class="btn-floating green tooltipped" data-position="left" data-delay="50" data-tooltip="Novo Status">
+      <a routerLink="/status/novo" class="btn-floating green tooltipped" data-position="left" data-delay="50" data-tooltip="Novo Status">
         <i class="material-icons">&#xE86C;</i>
       </a>
     </li>
@@ -74,7 +75,7 @@
       </a>
     </li>
     <li>        
-      <a routerLink="/tarefas/novo"class="btn-floating red tooltipped" data-position="left" data-delay="50" data-tooltip="Nova Tarefa">
+      <a routerLink="/tarefas/novo" class="btn-floating red tooltipped" data-position="left" data-delay="50" data-tooltip="Nova Tarefa">
         <i class="material-icons">&#xE862;</i>
       </a>
     </li>
@@ -84,6 +85,6 @@
 
 <router-outlet></router-outlet>
 
-<script>
+<!-- <script>
   $(".button-collapse").sideNav();
-</script>
+</script> -->

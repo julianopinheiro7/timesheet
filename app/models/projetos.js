@@ -15,7 +15,7 @@ module.exports = function() {
         type: Number,
         required: true
       },
-      dataSolicitacao: {
+      dataConclusao: {
          type: Date,
          required: true
       }      

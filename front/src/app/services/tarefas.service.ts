@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
 export class Tarefa {
   public _id: string;
   public chamado: number;
-  public data: string;
+  public data: Date;
   public solicitante: string;
   public projeto: string;
   public descricao: string;
@@ -23,6 +23,7 @@ export class TarefasService {
   }
 
   public salvar(dados: Tarefa) {
+        
     //Tarefa já existente.
     if(dados._id) {
       return this.http.put('http://localhost:3000/tarefas', dados);
