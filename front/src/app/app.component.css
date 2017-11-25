@@ -1,38 +1,59 @@
 nav {
-    background-color: transparent;
-    box-shadow: rgba(0, 0, 0, 0.14) 0px 1px 1px 0px !important;
+    background-color: #fafafa;
+    height: 60px;
 }
-
-nav #nav-image {
-    width: 190px;
-    vertical-align: sub;
-    margin-left: 15px;
-}
-
-#btnMenu {
-    color: #34c3c8;
-    margin-left: 15px;
-}
-
-#backMenu {
-    background: url(/assets/img/background.jpg) no-repeat center;
-    background-size: cover;
-}
-
-#divExit {    
-    position: relative;
-    right: 20px;
-}
-
-#btnExit {
-    color: #767676;
-}
-
-#btnExit:hover {
-    color: #34c3c8;
-}
-
+ 
 #logo {
-    width: 30%;
+    margin-top: 10px;    
+}
+
+#menuBurger {
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+#cadastro {
+    font-size: 23px;    
+    color: #d0cfcf;
+    padding: 20px 20px 50px 0;
+}
+
+ul {
+    list-style-type: none;
+    width: 100%;
+}
+
+.menu li {
+    position:relative; 
+    float:left;     
+}
+
+.menu li  ul{
+    position:absolute; 
+    top: 50px; 
+    left:0;
+    background-color:#fff; 
+    display:none;
+}
+
+.menu li:hover ul, .menu li.over ul{display:block;}
+
+.iconSpace {
+    padding-right: 10px;
+}
+
+.linkCadastro {
+    padding: 20px 0 20px 0;
+    font-size: 28px;    
+}
+
+.lnkOpcoes {
+    color: #b7b6b6;
+    padding: 0 20px 20px 0;
+    font-size: 19px;
+}
+
+.lnkOpcoes:hover {
+    color: #2dc3c8;
 }
 

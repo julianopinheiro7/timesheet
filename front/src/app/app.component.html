@@ -1,90 +1,106 @@
-<!-- <nav>
-  <div class="nav-wrapper">
-    <a href="#" materialize="sideNav" id="btnMenu" data-activates="slide-out">
-      <i class="material-icons">menu</i>
+<nav class="nav">
+  <div>
+    <a id="exibir" href="#">
+      <img id="menuBurger" src="assets/img/menu.png">
     </a>
-    <a href="#" class="brand-logo">
-      <img src="assets/img/logo.png" id="nav-image" alt="Exibindo logo_transp.png" aria-hidden="true">
-    </a>
-    <div class="right" id="divExit">
-      <a href="#!">
-        <i class="material-icons" id="btnExit">&#xE879;</i>
-      </a>
-    </div>
   </div>
-</nav> -->
-
-
-<ul id="slide-out" class="side-nav">
-  <li>
-    <div class="user-view">
-      <div class="background" id="backMenu"></div>
-      <a href="#!user">
-        <img class="circle" id="logo" src="assets/img/logo.png">
-      </a>
-      <a href="#!name">
-        <span class="white-text name">Juliano Pinheiro</span>
-      </a>
-      <a href="#!email">
-        <span class="white-text email">julianopinheiro.adm@gmail.com</span>
-      </a>
-    </div>
-  </li>
-  <li>
+  <div class="col-md-10">
     <a href="/home">
-      <i class="material-icons">&#xE88A;</i>Home</a>
-  </li>
-  <li>
-    <a href="/tarefas">
-      <i class="material-icons">&#xE862;</i>Tarefas</a>
-  </li>
-  <li>
-    <a href="#!">
-      <i class="material-icons">&#xE85D;</i>Projetos</a>
-  </li>
-  <li>
-    <a href="/status">
-      <i class="material-icons">&#xE86C;</i>Status</a>
-  </li>
-  <li>
-    <div class="divider"></div>
-  </li>
-  <li>
-    <a class="subheader">Opções</a>
-  </li>
-  <li>
-    <a href="#!">
-      <i class="material-icons">&#xE8B8;</i>Configurações</a>
-  </li>
-</ul>
+      <img id="logo" src="assets/img/logoTimesheet.png">
+    </a>    
+  </div>
+</nav>
 
-<div class="fixed-action-btn vertical">
-  <a class="btn-floating btn-large teal">
-    <i class="large material-icons">mode_edit</i>
+<div id="MeuDiv" style="position: relative; display: flex; background-color: #fafafa; width:300px; height:605px; display: none;">
+  <a id="esconder" href="#" style="float: right">
+    <img src="assets/img/close.png" style="width: 15px; margin: 5px;">
   </a>
-  <ul>
-    <!-- <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li> -->
+  <!-- Menu -->
+  <ul id="slide-out" class="side-nav">
     <li>
-      <a routerLink="/status/novo" class="btn-floating green tooltipped" data-position="left" data-delay="50" data-tooltip="Novo Status">
-        <i class="material-icons">&#xE86C;</i>
-      </a>
+      <div class="user-view">
+        <div class="background" id="backMenu"></div>
+        <a href="#!user">
+          <img class="circle" id="logo" src="assets/img/fotoPerfil.png">
+        </a>
+        <a href="#!name">
+          <span class="white-text name">Juliano Pinheiro</span>
+        </a>
+        <a href="#!email">
+          <span class="white-text email">julianopinheiro.adm@gmail.com</span>
+        </a>
+      </div>
     </li>
     <li>
-      <a class="btn-floating blue tooltipped" data-position="left" data-delay="50" data-tooltip="Novo Projeto">
-        <i class="material-icons">&#xE85D;</i>
-      </a>
+      <a href="/home">
+        <i class="material-icons">&#xE88A;</i>Home</a>
     </li>
-    <li>        
-      <a routerLink="/tarefas/novo" class="btn-floating red tooltipped" data-position="left" data-delay="50" data-tooltip="Nova Tarefa">
-        <i class="material-icons">&#xE862;</i>
-      </a>
+    <li>
+      <a href="/tarefas">
+        <i class="material-icons">&#xE862;</i>Tarefas</a>
+    </li>
+    <li>
+      <a href="#!">
+        <i class="material-icons">&#xE85D;</i>Projetos</a>
+    </li>
+    <li>
+      <a href="/status">
+        <i class="material-icons">&#xE86C;</i>Status</a>
+    </li>
+    <li>
+      <div class="divider"></div>
+    </li>
+    <li>
+      <a class="subheader">Opções</a>
+    </li>
+    <li>
+      <a href="#!">
+        <i class="material-icons icons-menu">&#xE8B8;</i>Configurações</a>
     </li>
   </ul>
 </div>
 
+<div>
+    <ul class="menu">      
+          <li>
+            <a id="cadastro" href="#"><i class="material-icons iconSpace">mode_edit</i>Cadastro</a>
+               <ul style="width: 1280px; top: 0">
+                      <li>
+                          <a routerLink="/tarefas/novo" class="lnkOpcoes">
+                            <i class="material-icons iconSpace">&#xE86C;</i>Nova Tarefa
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#" class="lnkOpcoes">
+                             <i class="material-icons iconSpace">&#xE85D;</i>Novo Projeto
+                          </a>
+                      </li>
+                      <li>
+                          <a routerLink="/status/novo" class="lnkOpcoes">
+                              <i class="material-icons iconSpace">&#xE862;</i>Novo Status
+                            </a>  
+                      </li>                    
+               </ul>
+        </li>            
+  </ul>
+</div>
 
 <router-outlet></router-outlet>
 
-<!-- <script>
-  $(".button-collapse").sideNav();
-</script> -->
+<script>
+  $(document).ready(function () {
+    $("a").click(function (event) {
+      var link = $(this);
+      if (link.attr("id").match("esconder"))
+        $("#MeuDiv").hide("slow");
+      else
+        $("#MeuDiv").show("slow");
+      event.preventDefault();
+    });
+  })
+
+  $(document).ready(function() {	
+     $(".data").mask("99/99/9999");            
+    });
+
+</script>

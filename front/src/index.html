@@ -11,16 +11,29 @@
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="../node_modules/jquery/dist/jquery-1.8.0.min.js"></script>
 </head>
 
 <body>
   <app-root></app-root>
-<!-- 
+
   <script>
-    $(document).ready(function () {
-      $('select').material_select();
-    });
-  </script> -->
+      $(document).ready(function(){  
+        $("a").click(function(event){  
+          var link = $(this);			  
+          if(link.attr("id").match("esconder"))
+            $("#MeuDiv").hide("slow");
+          else
+            $("#MeuDiv").show("slow");  
+          event.preventDefault();
+        });
+      })
+      
+      $(document).ready(function() {	
+          $(".data").mask("99/99/9999");            
+      });      
+
+    </script>
 
 </body>
 
