@@ -1,56 +1,57 @@
 <div class="container" style="margin-top: 80px;">
+
+  <h3 id="titulo">Cadastrar Tarefa</h3>
+
   <form #tarefasForm="ngForm" (ngSubmit)="enviar()">
 
     <div class="row">
       <div class="form-group col-sm-2">
-        <label for="chamado" class="lblCadastro">Num. Chamado</label>
-        <input id="chamado" name="chamado" type="text" class="form-control" [(ngModel)]="model.chamado" />
+        <label for="chamado" class="lblCadastro">Numero do Chamado</label>
+        <input id="chamado" name="chamado" type="text" class="form-control inputCadastro" [(ngModel)]="model.chamado" />
       </div>
 
-      <div class="form-group col-sm-3">
+      <div class="form-group col-sm-2">
         <label for="data_tarefa" class="lblCadastro">Data da tarefa</label>
-        <input id="data_tarefa" name="data" type="text" class="form-control data" [(ngModel)]="model.data">
+        <input id="data_tarefa" name="data" type="date" class="form-control inputCadastro" [(ngModel)]="model.data">        
       </div>
     </div>
 
     <div class="row">
       <div class="form-group col-sm-4">
-        <label for="solicitante" class="lblCadastro">Solicitante</label>
-        <input id="solicitante" type="text" name="solicitante" class="form-control" [(ngModel)]="model.solicitante">
-      </div>
-
-      <div class="form-group col-sm-4">
         <label for="projeto" class="lblCadastro">Projeto</label>
-        <input id="projeto" type="text" name="projeto" class="form-control" [(ngModel)]="model.projeto">
+        <input id="projeto" type="text" name="projeto" class="form-control inputCadastro" [(ngModel)]="model.projeto">
+      </div>
+      <div class="form-group col-sm-4">
+        <label for="solicitante" class="lblCadastro">Solicitante</label>
+        <input id="solicitante" type="text" name="solicitante" class="form-control inputCadastro" [(ngModel)]="model.solicitante">
       </div>
     </div>
-
 
     <div class="form-group">
       <label for="descricao" class="lblCadastro">Descrição</label>
-      <input id="descricao" type="text" name="descricao" class="form-control" [(ngModel)]="model.descricao">
-    </div>
-
-
-    <div class="form-group col-sm-4">
-      <label for="status" class="lblCadastro">Status</label>
-      <select id="status" name="status" class="form-control" [(ngModel)]="model.status">
-        <option disabled>(Selecione)</option>
-        <option *ngFor="let sta of status | async" [ngValue]="sta._id">{{sta.descricao}}</option>
-      </select>
+      <input id="descricao" type="text" name="descricao" class="form-control inputCadastro" [(ngModel)]="model.descricao">        
     </div>
 
     <div class="row">
       <div class="form-group col-sm-2">
-        <label for="tempo" class="lblCadastro">Estimativa de Tempo (Horas)</label>
-        <input id="tempo" type="text" name="tempo" class="form-control" [(ngModel)]="model.tempo">
+        <label for="tempo" class="lblCadastro">Tempo (Horas)</label>
+        <input id="tempo" type="text" name="tempo" class="form-control inputCadastro" [(ngModel)]="model.tempo">
+      </div>
+
+      <div class="form-group col-sm-4">
+        <label for="status" class="lblCadastro">Status</label>
+        <select id="status" name="status" class="form-control inputCadastro" [(ngModel)]="model.status">
+          <option *ngFor="let sta of status | async" selected [ngValue]="sta._id">{{sta.descricao}}</option>
+        </select>
       </div>
     </div>
 
-
     <div class="row">
       <div class="text-center">
-        <input type="submit" class="btn btn-primary" value="Enviar" />
+        <input type="submit" id="gravar" class="btn btn-link btnCadastro" value="Gravar" />
+      </div>
+      <div class="text-center">
+        <a href="/tarefas" class="btn btn-link btnCadastro">LISTAR</a>
       </div>
     </div>
 

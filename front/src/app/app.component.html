@@ -11,59 +11,24 @@
   </div>
 </nav>
 
-<div id="MeuDiv" style="position: relative; display: flex; background-color: #fafafa; width:300px; height:605px; display: none;">
+<div id="MeuDiv">
   <a id="esconder" href="#" style="float: right">
     <img src="assets/img/close.png" style="width: 15px; margin: 5px;">
   </a>
   <!-- Menu -->
-  <ul id="slide-out" class="side-nav">
-    <li>
-      <div class="user-view">
-        <div class="background" id="backMenu"></div>
-        <a href="#!user">
-          <img class="circle" id="logo" src="assets/img/fotoPerfil.png">
-        </a>
-        <a href="#!name">
-          <span class="white-text name">Juliano Pinheiro</span>
-        </a>
-        <a href="#!email">
-          <span class="white-text email">julianopinheiro.adm@gmail.com</span>
-        </a>
-      </div>
-    </li>
-    <li>
-      <a href="/home">
-        <i class="material-icons">&#xE88A;</i>Home</a>
-    </li>
-    <li>
-      <a href="/tarefas">
-        <i class="material-icons">&#xE862;</i>Tarefas</a>
-    </li>
-    <li>
-      <a href="#!">
-        <i class="material-icons">&#xE85D;</i>Projetos</a>
-    </li>
-    <li>
-      <a href="/status">
-        <i class="material-icons">&#xE86C;</i>Status</a>
-    </li>
-    <li>
-      <div class="divider"></div>
-    </li>
-    <li>
-      <a class="subheader">Opções</a>
-    </li>
-    <li>
-      <a href="#!">
-        <i class="material-icons icons-menu">&#xE8B8;</i>Configurações</a>
-    </li>
+  <ul class="list-group">    
+    <li class="list-group-item"><a href="/home" class="lnkOpcoes"><i class="material-icons iconSpace">&#xE88A;</i>Home</a></li>
+    <li class="list-group-item"><a href="/tarefas" class="lnkOpcoes"><i class="material-icons iconSpace">&#xE862;</i>Tarefas</a></li>
+    <li class="list-group-item"><a href="#!" class="lnkOpcoes"><i class="material-icons iconSpace">&#xE85D;</i>Projetos</a></li>
+    <li class="list-group-item"><a href="/status" class="lnkOpcoes"><i class="material-icons iconSpace">&#xE86C;</i>Status</a></li>
+    <li class="list-group-item"><a href="#!" class="lnkOpcoes"><i class="material-icons iconSpace">&#xE8B8;</i>Configurações</a></li>
   </ul>
 </div>
 
-<div>
+<div style="z-index: 100;">
     <ul class="menu">      
           <li>
-            <a id="cadastro" href="#"><i class="material-icons iconSpace">mode_edit</i>Cadastro</a>
+            <a id="cadastro" href="#"><i class="material-icons iconSpace"><i class="material-icons">border_color</i></i>Cadastro</a>
                <ul style="width: 1280px; top: 0">
                       <li>
                           <a routerLink="/tarefas/novo" class="lnkOpcoes">
@@ -97,10 +62,5 @@
         $("#MeuDiv").show("slow");
       event.preventDefault();
     });
-  })
-
-  $(document).ready(function() {	
-     $(".data").mask("99/99/9999");            
-    });
-
+  })  
 </script>

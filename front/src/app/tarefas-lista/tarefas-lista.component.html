@@ -1,14 +1,14 @@
 <div class="container" id="tarefas">
       
-  <table class="responsive-table">
+  <table class="table">
     <thead>
       <th>Chamado</th>
       <th>Data da Tarefa</th>
       <th>Solicitante</th>
       <th>Projeto</th>
       <th>Descrição</th>
-      <th>Status</th>   
-      <th>Tempo</th>      
+      <th>Tempo</th>  
+      <th>Status</th> 
       <th>Editar</th>   
       <th>Excluir</th>   
     </thead>
@@ -23,8 +23,8 @@
           <td>{{tarefa.solicitante}}</td>
           <td>{{tarefa.projeto}}</td>
           <td>{{tarefa.descricao}}</td>
-          <td>{{tarefa.status.descricao}}</td>          
           <td>{{tarefa.tempo}}</td>  
+          <td>{{tarefa.status.descricao}}</td>
           <td class="sizeOp">
             <a class="btn-flat btnLink" [routerLink]="['/tarefas', tarefa._id]">        
               <i class="material-icons btnOp">edit</i>

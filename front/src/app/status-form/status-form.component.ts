@@ -42,7 +42,7 @@ export class StatusFormComponent implements OnInit {
     this.st.salvar(this.model).subscribe(
       function (dados) {
         console.log(dados)
-        roteador.navigate(['/status']);
+        // roteador.navigate(['/status']);        
       },
       function (erro) {
         //

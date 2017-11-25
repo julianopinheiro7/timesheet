@@ -1,16 +1,18 @@
 #linha {
     border: none;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+    border-radius: 5px;
     height: 28px;
     outline: none;
     transition: box-shadow 200ms cubic-bezier(0.4,0.0,0.2,1);
     margin-left: auto;
     margin-right: auto;
     width: 100%;
+    background: #fdfdfd;
 }
 
 #tarefas {
-    margin-top: 30px;
+    margin-top: 80px;
 }
 
 #numChamado {
@@ -19,8 +21,10 @@
 }
 
 .btnOp {
-    font-size: 1.6rem !important;
-    color: #9e9e9e;      
+    font-size: 25px !important;
+    top: 5px;
+    position: relative;
+    color: #9e9e9e;     
 }
 
 .btnLink {
@@ -38,10 +42,36 @@
 table , tr {
     font-family: 'Source', sans-serif;
     border-collapse: separate;
-    border-spacing: 0 10px;    
+    border-spacing: 0 15px;    
 }
 
-thead {
-    font-family: 'Montserrat', sans-serif;
+table , th {
+    font-size: 16px;
+    color: #25c5b6;        
+}
+
+table , td {
+    font-size: 17px;
+    color: #757575;
+    font-family: 'Varela Round', sans-serif; 
+}
+
+.table > tbody > tr > td {
+    padding: 8px;
+    line-height: 
+}
+
+thead {    
+    font-family: 'Varela Round', sans-serif;
+}
+
+@media (min-width: 1200px) {
+ .container {
+    max-width: 1300px !important;
+    }
+}
+
+table thead th {
+    border: 0;
 }
 

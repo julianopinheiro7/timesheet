@@ -1,0 +1,31 @@
+input {
+    font-size: 18px;
+}
+
+#titulo {
+    font-size: 30px;    
+    margin-bottom: 20px;
+    color: #d0cfcf;    
+}
+
+#descricao {
+    height: 50px;
+}
+
+.lblCadastro {
+    font-size: 16px;
+}
+
+.btnCadastro {
+    font-size: 16px;
+    padding: 10px 39px;
+    text-decoration: none;
+    color: rgb(143, 141, 141) !important; ;
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;  
+}
+
+.btnCadastro:hover {
+    color: #1dbec3 !important;
+    border: 1px solid #1dbec3;
+}
