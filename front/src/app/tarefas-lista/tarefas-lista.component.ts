@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-// import { HttpClient } from '@angular/common/http';
 import { TarefasService} from '../services/tarefas.service';
 
 @Component({
@@ -12,9 +11,7 @@ export class TarefasListaComponent implements OnInit {
 
   private tarefas : any
   
-  constructor(private service: TarefasService) { 
-    
-  }
+  constructor(private service: TarefasService) { }
 
   ngOnInit() {
     this.atualizarLista()

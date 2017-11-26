@@ -25,6 +25,7 @@ nav {
     font-size: 19px;    
     color: #757575;
     padding: 20px 20px 50px 0;
+    margin-left: 25px;
     font-family: 'Varela Round', sans-serif;
 }
 
@@ -60,7 +61,7 @@ ul {
 .lnkOpcoes {
     color: #b7b6b6;
     padding: 0 20px 20px 0;
-    font-size: 19px;
+    font-size: 16px;
     font-family: 'Varela Round', sans-serif;
 }
 
