@@ -10,12 +10,12 @@
       <tr *ngFor="let sta of status" id="linha">
         <td id="tbDescricao">{{sta.descricao}}</td>
         <td class="sizeOp">
-          <a class="btn-flat btnLink" [routerLink]="['/status', status._id]">
+          <a class="btn-flat btnLink" [routerLink]="['/status', sta._id]">
             <i class="material-icons btnOp">edit</i>
           </a>
         </td>
         <td class="sizeOp">
-          <a class="btn-flat btnLink" (click)="excluir(status._id)">
+          <a class="btn-flat btnLink" (click)="excluir(sta._id)">
             <i class="material-icons btnOp">close</i>
           </a>
         </td>

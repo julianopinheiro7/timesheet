@@ -25,11 +25,11 @@
   </ul>
 </div>
 
-<div style="z-index: 100;">
+<div class="">
     <ul class="menu">      
           <li>
-            <a id="cadastro" href="#"><i class="material-icons iconSpace"><i class="material-icons">border_color</i></i>Cadastro</a>
-               <ul style="width: 1280px; top: 0">
+            <a id="cadastro" href="#"><i class="material-icons iconSpace">navigate_next</i>Cadastro</a>
+               <ul style="width: 1280px; top: 0; left: 118px;">
                       <li>
                           <a routerLink="/tarefas/novo" class="lnkOpcoes">
                             <i class="material-icons iconSpace">&#xE862;</i>Nova Tarefa
@@ -63,4 +63,9 @@
       event.preventDefault();
     });
   })  
+
+  $(document).ready(function() {	
+    $(".tempo").mask("999:00");            
+  }); 
+
 </script>

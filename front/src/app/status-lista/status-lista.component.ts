@@ -20,8 +20,8 @@ export class StatusListaComponent implements OnInit {
   atualizarLista() {
     this.service.listarTodos().subscribe(dados => this.status = dados)
   }
-
-  excluir(id: string) {
+  
+  excluir(id: string) {    
     if(confirm('Deseja realmente excluir este status?')) {
       this.service.excluir(id).subscribe(
         () => this.atualizarLista(),

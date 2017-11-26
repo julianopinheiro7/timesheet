@@ -23,7 +23,7 @@
           <td>{{tarefa.solicitante}}</td>
           <td>{{tarefa.projeto}}</td>
           <td>{{tarefa.descricao}}</td>
-          <td>{{tarefa.tempo}}</td>  
+          <td class="tempo">{{tarefa.tempo}}</td>  
           <td>{{tarefa.status.descricao}}</td>
           <td class="sizeOp">
             <a class="btn-flat btnLink" [routerLink]="['/tarefas', tarefa._id]">        
@@ -39,3 +39,9 @@
     </tbody>  
   </table>
 </div>
+
+<script>
+    $(document).ready(function() {	
+      $(".tempo").mask("99:00");            
+    }); 
+</script>

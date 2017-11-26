@@ -22,11 +22,12 @@ nav {
 }
 
 #cadastro {
-    font-size: 19px;    
-    color: #757575;
+    font-size: 18px;    
+    color: #a7a7a7;
     padding: 20px 20px 50px 0;
-    margin-left: 25px;
     font-family: 'Varela Round', sans-serif;
+    left: 160px;
+    position: relative;
 }
 
 ul {
@@ -51,6 +52,8 @@ ul {
 
 .iconSpace {
     padding-right: 10px;
+    top: 5px;
+    position: relative;
 }
 
 .linkCadastro {

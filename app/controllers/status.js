@@ -40,11 +40,12 @@ module.exports = function(app) {
             }
         );
     }
-
+    
     controller.excluir = function(req, res) {
 
         var idStatus = req.params.id;
 
+        console.log(idStatus);
         status.remove({_id: idStatus }).exec().then(
             function () {
                 //http 204: ok, sem conteudo

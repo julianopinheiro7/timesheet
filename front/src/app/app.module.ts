@@ -5,7 +5,6 @@ import { FormsModule } from '@angular/forms'
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { RoutingModule } from './app.routes';
-// import { MaterializeModule } from 'angular2-materialize';
 
 import { TarefasListaComponent } from './tarefas-lista/tarefas-lista.component'
 import { TarefasFormComponent } from './tarefas-form/tarefas-form.component';
