@@ -20,7 +20,7 @@ export class TarefasFormComponent implements OnInit {
     private ts: TarefasService,
     private st: StatusService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute    
   ) { }
 
   ngOnInit() {
@@ -44,9 +44,7 @@ export class TarefasFormComponent implements OnInit {
     let roteador = this.router;    
     this.ts.salvar(this.model).subscribe(
       function (dados) {
-        console.log(dados)
-        // roteador.navigate(['/tarefas']);
-        alert("Registro salvo com sucesso!");
+             
       },
       function (erro) {
         //

@@ -26,7 +26,7 @@ import { StatusFormComponent } from './status-form/status-form.component';
     BrowserModule,
     HttpClientModule,
     RoutingModule,
-    FormsModule    
+    FormsModule      
   ],
 
   providers: [],
