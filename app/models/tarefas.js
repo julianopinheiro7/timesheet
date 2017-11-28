@@ -15,7 +15,8 @@ module.exports = function() {
          required: true
       },
       projeto: {
-        type: String,
+        type: mongoose.Schema.ObjectId,        
+        ref: 'projetos',
         required: true
       },
       descricao: {

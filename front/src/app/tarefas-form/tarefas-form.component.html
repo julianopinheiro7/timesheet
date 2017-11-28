@@ -15,10 +15,14 @@
     </div>
 
     <div class="row">
+
       <div class="form-group col-sm-4">
-        <label for="projeto" class="lblCadastro">Projeto</label>
-        <input id="projeto" type="text" name="projeto" class="form-control inputCadastro" [(ngModel)]="model.projeto">
-      </div>
+          <label for="projetos" class="lblCadastro">Projetos</label>
+          <select id="projetos" name="projetos" class="form-control inputCadastro" [(ngModel)]="model.projeto">
+            <option *ngFor="let pro of projetos | async" [ngValue]="pro._id">{{pro.nomeProjeto}}</option>
+          </select>
+        </div>
+
       <div class="form-group col-sm-4">
         <label for="solicitante" class="lblCadastro">Solicitante</label>
         <input id="solicitante" type="text" name="solicitante" class="form-control inputCadastro" [(ngModel)]="model.solicitante">
@@ -32,14 +36,14 @@
 
     <div class="row">
       <div class="form-group col-sm-2">
-        <label for="tempo" class="lblCadastro">Tempo (Horas)</label>
+        <label for="tempo" class="lblCadastro">Qtde. Horas</label>
         <input id="tempo" type="text" name="tempo" class="form-control inputCadastro" [(ngModel)]="model.tempo">
       </div>
 
       <div class="form-group col-sm-4">
         <label for="status" class="lblCadastro">Status</label>
         <select id="status" name="status" class="form-control inputCadastro" [(ngModel)]="model.status">
-          <option *ngFor="let sta of status | async" selected [ngValue]="sta._id">{{sta.descricao}}</option>
+          <option *ngFor="let sta of status | async" [ngValue]="sta._id">{{sta.nomeStatus}}</option>
         </select>
       </div>
     </div>

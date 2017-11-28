@@ -8,9 +8,10 @@ import { RoutingModule } from './app.routes';
 
 import { TarefasListaComponent } from './tarefas-lista/tarefas-lista.component'
 import { TarefasFormComponent } from './tarefas-form/tarefas-form.component';
-
 import { StatusListaComponent } from './status-lista/status-lista.component';
 import { StatusFormComponent } from './status-form/status-form.component';
+import { ProjetosFormComponent } from './projetos-form/projetos-form.component';
+import { ProjetosListaComponent } from './projetos-lista/projetos-lista.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,9 @@ import { StatusFormComponent } from './status-form/status-form.component';
     TarefasListaComponent,
     TarefasFormComponent,
     StatusListaComponent,
-    StatusFormComponent
+    StatusFormComponent,
+    ProjetosFormComponent,
+    ProjetosListaComponent
   ],
 
   imports: [

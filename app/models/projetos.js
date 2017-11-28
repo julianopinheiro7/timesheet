@@ -3,22 +3,22 @@ var mongoose = require('mongoose');
 module.exports = function() {
 
    var schema = mongoose.Schema({
-      projeto: {
+      nomeProjeto: {
         type: String,
         required: true
       },
       dataSolicitacao: {
-        type: Date,
-        required: true
-      },
-      quantidadeHoras: {
-        type: Number,
+        type: String,
         required: true
       },
       dataConclusao: {
-         type: Date,
+         type: String,
          required: true
-      }      
+      },
+      quantidadeHoras: {
+        type: String,
+        required: true
+      }
    });
 
    return mongoose.model('projetos', schema);

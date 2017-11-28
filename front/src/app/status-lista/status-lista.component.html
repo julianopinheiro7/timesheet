@@ -2,13 +2,13 @@
 
   <table class="table" id="tbStatus">
     <thead>
-      <th>Descrição</th>
+      <th>Nome do Status</th>
       <th>Editar</th>
       <th>Excluir</th>
     </thead>
     <tbody>
       <tr *ngFor="let sta of status" id="linha">
-        <td id="tbDescricao">{{sta.descricao}}</td>
+        <td id="tbDescricao">{{sta.nomeStatus}}</td>
         <td class="sizeOp">
           <a class="btn-flat btnLink" [routerLink]="['/status', sta._id]">
             <i class="material-icons btnOp">edit</i>

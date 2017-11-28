@@ -1,0 +1,41 @@
+<div class="container" style="margin-top: 80px;">
+
+  <form #projetoForm="ngForm" (ngSubmit)="enviar()">
+
+    <div class="row" style="margin-top: 30px;">
+      <div class="form-group col-sm-4">
+        <label for="descricao" class="lblCadastro">Nome do Projeto</label>
+        <input id="descricao" name="descricao" type="text" class="validate" [(ngModel)]="model.nomeProjeto">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group col-sm-2">
+        <label for="data_solicitacao" class="lblCadastro">Data da Solicitação</label>
+        <input id="data_solicitacao" name="data_solicitacao" type="date" class="form-control inputCadastro" [(ngModel)]="model.dataSolicitacao">
+      </div>
+
+      <div class="form-group col-sm-2">
+          <label for="data_conclusao" class="lblCadastro">Data da Conclusão</label>
+          <input id="data_conclusao" name="data_conclusao" type="date" class="form-control inputCadastro" [(ngModel)]="model.dataConclusao">
+        </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group col-sm-2">
+        <label for="quantidadeHoras" class="lblCadastro">Quantidade de Horas</label>
+        <input id="quantidadeHoras" name="quantidadeHoras" type="text" class="validate" [(ngModel)]="model.quantidadeHoras">
+      </div>
+    </div>
+
+    <div class="row" id="btnProjeto">
+      <div class="text-center">
+        <input type="submit" id="gravar" class="btn btn-link btnCadastro" value="Gravar" />
+      </div>
+      <div class="text-center">
+        <a href="/projetos" class="btn btn-link btnCadastro">LISTAR</a>
+      </div>
+    </div>
+
+  </form>
+</div>

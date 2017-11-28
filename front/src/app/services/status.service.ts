@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http'
 
 export class Status {
   public _id : string;
-  public descricao : string;
+  public nomeStatus : string;
 }
 
 @Injectable()
@@ -25,12 +25,10 @@ export class StatusService {
       return this.http.post('http://localhost:3000/status', dados);
     }
   }
-  
-  debugger;
+    
   public obterporID(id: string) {
     return this.http.get('http://localhost:3000/status/'+ id);
   }
-
 
   public excluir(id: string) {
     return this.http.delete('http://localhost:3000/status/' + id);

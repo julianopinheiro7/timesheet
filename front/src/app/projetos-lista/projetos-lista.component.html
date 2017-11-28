@@ -1,0 +1,31 @@
+<div class="container" id="projetos">
+
+  <table class="table" id="tbProjetos">
+    <thead>
+      <th>Nome do Projeto</th>
+      <th>Data Solicitação</th>
+      <th>Data Conclusão</th>
+      <th>Quantidade Horas</th>
+      <th>Editar</th>
+      <th>Excluir</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pro of projetos" id="linha">
+        <td>{{pro.nomeProjeto}}</td>
+        <td>{{pro.dataSolicitacao | date: 'dd/MM/yyyy'}}</td>
+        <td>{{pro.dataConclusao | date: 'dd/MM/yyyy'}}</td>
+        <td>{{pro.quantidadeHoras}}</td>
+        <td class="sizeOp">
+          <a class="btn-flat btnLink" [routerLink]="['/projetos', pro._id]">
+            <i class="material-icons btnOp">edit</i>
+          </a>
+        </td>
+        <td class="sizeOp">
+          <a class="btn-flat btnLink" (click)="excluir(pro._id)">
+            <i class="material-icons btnOp">close</i>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
