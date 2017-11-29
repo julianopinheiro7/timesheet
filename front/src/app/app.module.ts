@@ -12,6 +12,8 @@ import { StatusListaComponent } from './status-lista/status-lista.component';
 import { StatusFormComponent } from './status-form/status-form.component';
 import { ProjetosFormComponent } from './projetos-form/projetos-form.component';
 import { ProjetosListaComponent } from './projetos-lista/projetos-lista.component';
+import { UsuariosFormComponent } from './usuarios-form/usuarios-form.component';
+import { UsuariosListaComponent } from './usuarios-lista/usuarios-lista.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { ProjetosListaComponent } from './projetos-lista/projetos-lista.componen
     StatusListaComponent,
     StatusFormComponent,
     ProjetosFormComponent,
-    ProjetosListaComponent
+    ProjetosListaComponent,
+    UsuariosFormComponent,
+    UsuariosListaComponent
   ],
 
   imports: [

@@ -16,7 +16,7 @@ module.exports = function() {
         required: true
       },
       dataCadastro: {
-         type: Date,
+         type: String,
          required: true
       }      
    });

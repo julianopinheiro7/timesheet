@@ -1,0 +1,31 @@
+<div class="container" id="usuarios">
+    
+      <table class="table" id="tbUsuarios">
+        <thead>
+          <th>Nome do Usuario</th>
+          <th>Email</th>
+          <th>Perfil de Acesso</th>
+          <th>Data do Cadastro</th>
+          <th>Editar</th>
+          <th>Excluir</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let usu of usuarios" id="linha">
+            <td>{{usu.nomeUsuario}}</td>
+            <td>{{usu.email}}</td>
+            <td>{{usu.perfilAcesso}}</td>
+            <td>{{usu.dataCadastro | date: 'dd/MM/yyyy'}}</td>
+            <td class="sizeOp">
+              <a class="btn-flat btnLink" [routerLink]="['/usuarios', usu._id]">
+                <i class="material-icons btnOp">edit</i>
+              </a>
+            </td>
+            <td class="sizeOp">
+              <a class="btn-flat btnLink" (click)="excluir(usu._id)">
+                <i class="material-icons btnOp">close</i>
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
