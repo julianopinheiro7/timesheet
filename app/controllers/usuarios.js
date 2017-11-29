@@ -21,7 +21,7 @@ module.exports = function (app) {
     controller.obterUm = function (req, res) {
         var idUsuario = req.params.id;
 
-        usuarios.findById(idUsuario)(
+        usuarios.findById(idUsuario).then(
             function (usuarios) {
                 res.json(usuarios);
             },

@@ -41,11 +41,10 @@ export class StatusFormComponent implements OnInit {
     let roteador = this.router;
     this.st.salvar(this.model).subscribe(
       function (dados) {
-        console.log(dados)
-        // roteador.navigate(['/status']);        
+        document.getElementById('sucess').style.display="block";    
       },
       function (erro) {
-        //
+        document.getElementById('fail').style.display="block";
       }
     )
   }

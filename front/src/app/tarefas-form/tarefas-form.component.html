@@ -29,9 +29,11 @@
       </div>
     </div>
 
-    <div class="form-group">
-      <label for="descricao" class="lblCadastro">Descrição</label>
-      <input id="descricao" type="text" name="descricao" class="form-control inputCadastro" [(ngModel)]="model.descricao">        
+    <div class="row"> 
+      <div class="form-group col-sm-7" >
+        <label for="descricao" class="lblCadastro">Descrição</label>
+        <input id="descricao" type="text" name="descricao" class="form-control inputCadastro" [(ngModel)]="model.descricao">        
+      </div>
     </div>
 
     <div class="row">
@@ -55,11 +57,15 @@
       <div class="text-center">
         <a href="/tarefas" class="btn btn-link btnCadastro">LISTAR</a>
       </div>      
+      <div id="sucess" style="display: none">
+          <div class="msgSucess">Registro gravado com sucesso!</div>
+      </div>
+      <div id="fail" style="display: none">
+          <div class="msgFail">Ocorreu um erro, tente novamente!</div>
+      </div>
     </div>
 
-    <div class="alert col-sm-3" id="msg" style="display: none">
-        <strong>Registro gravado com sucesso!</strong>
-    </div>
+    
 
     
 

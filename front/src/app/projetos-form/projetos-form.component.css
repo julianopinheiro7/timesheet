@@ -34,3 +34,23 @@ input {
     color: #1dbec3 !important;
     border: 1px solid #1dbec3;
 }
+
+.msgSucess {    
+    font-size: 15px;
+    color: #1dbec3;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    margin-top: 10px;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.msgFail {    
+    font-size: 15px;
+    color: #c31d33;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    margin-top: 10px;
+    font-family: 'Varela Round', sans-serif;
+}

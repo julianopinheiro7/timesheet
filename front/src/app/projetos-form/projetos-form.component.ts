@@ -39,11 +39,10 @@ export class ProjetosFormComponent implements OnInit {
     let roteador = this.router;
     this.pr.salvar(this.model).subscribe(
       function (dados) {
-        console.log(dados)
-        // roteador.navigate(['/projetos']);        
+        document.getElementById('sucess').style.display="block";    
       },
       function (erro) {
-        //
+        document.getElementById('fail').style.display="block";
       }
     )
   }

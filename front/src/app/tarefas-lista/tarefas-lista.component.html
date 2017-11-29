@@ -6,8 +6,8 @@
       <th>Data da Tarefa</th>
       <th>Solicitante</th>
       <th>Projeto</th>
-      <th>Status</th> 
       <th>Descrição</th>
+      <th>Status</th>
       <th>Horas</th>  
       <th>Editar</th>   
       <th>Excluir</th>   
@@ -21,9 +21,9 @@
           </td>
           <td>{{tarefa.data | date: 'dd/MM/yyyy'}}</td>
           <td>{{tarefa.solicitante}}</td>
-          <td>{{tarefa.projeto.nomeProjeto}}</td>
-          <td>{{tarefa.status.nomeStatus}}</td>
+          <td>{{tarefa.projeto.nomeProjeto}}</td>          
           <td>{{tarefa.descricao}}</td>
+          <td>{{tarefa.status.nomeStatus}}</td>
           <td class="tempo">{{tarefa.tempo}}</td>            
           <td class="sizeOp">
             <a class="btn-flat btnLink" [routerLink]="['/tarefas', tarefa._id]">        

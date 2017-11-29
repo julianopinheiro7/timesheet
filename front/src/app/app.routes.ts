@@ -16,8 +16,8 @@ import { HomeComponent } from './home/home.component'
 
 const routes: Routes = [
 
-    // Rota raiz /
-    { path: '', component: HomeComponent },
+    // // Rota raiz /
+    // { path: '', component: HomeComponent },
 
     // Rota /home
     { path: 'home', component: HomeComponent },

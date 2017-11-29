@@ -20,10 +20,11 @@ nav {
 #menuBurger {
     margin-top: 20px;
     margin-left: 15px;
+    width: 20px;
 }
 
 #cadastro {
-    font-size: 18px;    
+    font-size: 16px;    
     color: #a7a7a7;
     padding: 20px 20px 50px 0;
     font-family: 'Varela Round', sans-serif;
@@ -65,11 +66,13 @@ ul {
 .lnkOpcoes {
     color: #b7b6b6;
     padding: 0 20px 20px 0;
-    font-size: 16px;
+    font-size: 14px;
     font-family: 'Varela Round', sans-serif;
 }
 
 .lnkOpcoes:hover {
     color: #2dc3c8;
 }
+
+
 
