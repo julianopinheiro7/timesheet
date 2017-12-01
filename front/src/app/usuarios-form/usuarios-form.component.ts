@@ -10,8 +10,8 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class UsuariosFormComponent implements OnInit {
 
-  private model: Usuarios = new Usuarios();
-  private id: string;
+  private model: Usuarios = new Usuarios()
+  private id: string
 
   constructor(
     private us: UsuariosService,
@@ -20,7 +20,6 @@ export class UsuariosFormComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-
     this.route.params.subscribe(
       params => {
         if (params['id']) {
@@ -35,11 +34,11 @@ export class UsuariosFormComponent implements OnInit {
   }
 
   enviar() {
-
-    let roteador = this.router;
+        
+    let roteador = this.router;    
     this.us.salvar(this.model).subscribe(
-      function (dados) {
-        document.getElementById('sucess').style.display="block";    
+      function (dados) {        
+        document.getElementById('sucess').style.display="block";
       },
       function (erro) {
         document.getElementById('fail').style.display="block";

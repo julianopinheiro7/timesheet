@@ -21,19 +21,12 @@
       "styles": [
         "styles.css",
         "../node_modules/bootstrap/dist/css/bootstrap.css",
-        "../node_modules/bootstrap/dist/css/bootstrap-theme.css",
-        "../node_modules/mdbootstrap/css/bootstrap.css",
-        "../node_modules/mdbootstrap/css/mdb.css",
-        "../node_modules/mdbootstrap/css/style.css"
+        "../node_modules/bootstrap/dist/css/bootstrap-theme.css"            
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.maskedinput.js",  
         "../node_modules/jquery/dist/jquery.js",                
-        "../node_modules/bootstrap/dist/js/bootstrap.js",
-        "../node_modules/mdbootstrap/js/bootstrap.js",
-        "../node_modules/mdbootstrap/js/jquery-3.2.1.min.js",
-        "../node_modules/mdbootstrap/js/mdb.js",
-        "../node_modules/mdbootstrap/js/popper.min.js"        
+        "../node_modules/bootstrap/dist/js/bootstrap.js"         
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

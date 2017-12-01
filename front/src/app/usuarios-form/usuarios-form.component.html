@@ -1,47 +1,48 @@
 <div class="container" style="margin-top: 80px;">
-    
-      <form #usuariosForm="ngForm" (ngSubmit)="enviar()">
-    
-        <div class="row" style="margin-top: 30px;">
-          <div class="form-group col-sm-3">
-            <label for="nomeUsuario" class="lblCadastro">Nome do Usuario</label>
-            <input id="nomeUsuario" name="nomeUsuario" type="text" class="validate" [(ngModel)]="model.nomeUsuario">
-          </div>
-        </div>
-    
-        <div class="row">
-          <div class="form-group col-sm-4">
-            <label for="email" class="lblCadastro">Email</label>
-            <input id="email" name="email" type="email" class="form-control inputCadastro" [(ngModel)]="model.email">
-          </div>
-    
-          <div class="form-group col-sm-2">
-              <label for="perfilAcesso" class="lblCadastro">Perfil de Acesso</label>
-              <input id="perfilAcesso" name="perfilAcesso" type="text" class="form-control inputCadastro" [(ngModel)]="model.perfilAcesso">
-            </div>
-        </div>
-    
-        <div class="row">
-            <div class="form-group col-sm-2">
-                <label for="dataCadastro" class="lblCadastro">Data do Cadastro</label>
-                <input id="dataCadastro" name="dataCadastro" type="date" class="form-control inputCadastro" [(ngModel)]="model.dataCadastro">
-              </div>
-        </div>
-    
-        <div class="row" id="btnUsuario">
-          <div class="text-center">
-            <input type="submit" id="gravar" class="btn btn-link btnCadastro" value="Gravar" />
-          </div>
-          <div class="text-center">
-            <a href="/usuarios" class="btn btn-link btnCadastro">LISTAR</a>
-          </div>
-          <div id="sucess" style="display: none">
-              <div class="msgSucess">Registro gravado com sucesso!</div>
-          </div>
-          <div id="fail" style="display: none">
-              <div class="msgFail">Ocorreu um erro, tente novamente!</div>
-          </div>
-        </div>
-    
-      </form>
+
+  <form #usuariosForm="ngForm" (ngSubmit)="enviar()">
+
+    <div class="row" style="margin-top: 30px;">
+      <div class="form-group col-sm-4">
+        <label for="nomeUsuario" class="lblCadastro">Nome do Usuario</label>
+        <input id="nomeUsuario" name="nomeUsuario" type="text" class="validate" [(ngModel)]="model.nomeUsuario">
+      </div>
     </div>
+
+    <div class="row">
+      <div class="form-group col-sm-4">
+        <label for="email" class="lblCadastro">Email</label>
+        <input id="email" name="email" type="text" class="validate" [(ngModel)]="model.email">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group col-sm-3">
+        <label for="perfilAcesso" class="lblCadastro">Perfil de Acesso</label>
+        <input id="perfilAcesso" name="perfilAcesso" type="text" class="validate" [(ngModel)]="model.perfilAcesso">
+      </div>
+
+      <div class="form-group col-sm-3">
+        <label for="dataCadastro" class="lblCadastro">Data de Cadastro</label>
+        <input id="dataCadastro" name="dataCadastro" type="date" class="validate" [(ngModel)]="model.dataCadastro">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="text-center">
+        <input type="submit" id="gravar" class="btn btn-link btnCadastro" value="Gravar" />
+      </div>
+      <div class="text-center">
+        <a href="/usuarios" class="btn btn-link btnCadastro">LISTAR</a>
+      </div>
+      <div id="sucess" style="display: none">
+        <div class="msgSucess">Registro gravado com sucesso!</div>
+      </div>
+      <div id="fail" style="display: none">
+        <div class="msgFail">Ocorreu um erro, tente novamente!</div>
+      </div>
+    </div>
+
+
+  </form>
+</div>
