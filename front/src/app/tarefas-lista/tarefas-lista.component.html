@@ -1,47 +1,81 @@
 <div class="container" id="tarefas">
-      
-  <table class="table">
-    <thead>
-      <th>Chamado</th>
-      <th>Data da Tarefa</th>
-      <th>Solicitante</th>
-      <th>Projeto</th>
-      <th>Descrição</th>
-      <th>Status</th>
-      <th>Horas</th>  
-      <th>Editar</th>   
-      <th>Excluir</th>   
-    </thead>
-    <tbody>
-      <tr *ngFor="let tarefa of tarefas" id="linha">
-          <td>
-            <div id="numChamado">
-                {{tarefa.chamado}}
-            </div>
-          </td>
-          <td>{{tarefa.data | date: 'dd/MM/yyyy'}}</td>
-          <td>{{tarefa.solicitante}}</td>
-          <td>{{tarefa.projeto.nomeProjeto}}</td>          
-          <td>{{tarefa.descricao}}</td>
-          <td>{{tarefa.status.nomeStatus}}</td>
-          <td class="tempo">{{tarefa.tempo}}</td>            
-          <td class="sizeOp">
-            <a class="btn-flat btnLink" [routerLink]="['/tarefas', tarefa._id]">        
-              <i class="material-icons btnOp">edit</i>
-            </a>
-          </td>                            
-          <td class="sizeOp">
-            <a class="btn-flat btnLink" (click)="excluir(tarefa._id)">
-              <i class="material-icons btnOp">close</i>
-            </a>
-          </td>       
-      </tr>
-    </tbody>  
-  </table>
+
+  <div *ngFor="let tarefa of tarefas">
+    <div class="-sm-12" id="linha">
+      <div id="linha1">
+        <span class="col" id="spanChamado">Nº Chamado:</span>
+        <span class="col" id="numChamado">{{tarefa.chamado}}</span>
+        <div class="options">
+          <ul>
+            <li>
+              <a href="#">
+                <i class="material-icons" id="iconOption">more_horiz</i>
+              </a>
+              <ul>
+                <div id="opt">
+                    <li>
+                        <a class="btn-flat btnLink" title="Editar" [routerLink]="['/tarefas', tarefa._id]">
+                          <i class="material-icons btnOp">edit</i>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="btn-flat btnLink" title="Excluir" (click)="excluir(tarefa._id)">
+                          <i class="material-icons btnDelete">delete_forever</i>
+                        </a>
+                      </li>
+                </div>                
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <span class="spanTarefa col">Data da Tarefa:</span>
+        <span class="dadosTarefa col">{{tarefa.data | date: 'dd/MM/yyyy'}}</span>
+        <span class="spanTarefa col" id="solicitante">Solicitante:</span>
+        <span class="dadosTarefa col">{{tarefa.solicitante}}</span>
+        <span class="spanTarefa col" id="projeto">Projeto:</span>
+        <span class="dadosTarefa col">{{tarefa.projeto.nomeProjeto}}</span>
+      </div>
+      <div>
+        <span class="spanTarefa col">Status:</span>
+        <span class="dadosTarefa col" id="sta">{{tarefa.status.nomeStatus}}</span>
+        <span class="spanTarefa col" id="tempoPrevisto">Tempo Previsto:</span>
+        <span class="dadosTarefa col">{{tarefa.tempo}} Horas</span>
+      </div>
+      <div>
+        <span class="spanTarefa col">Descrição:</span>
+        <span class="dadosTarefa col">{{tarefa.descricao}}</span>
+      </div>
+
+    </div>
+  </div>
+
+
 </div>
 
 <script>
-    $(document).ready(function() {	
-      $(".tempo").mask("99:00");            
-    }); 
+  $(document).ready(function () {
+    $(".tempo").mask("99:00");
+  });
+
+  $(document).ready(function () {
+    AlteraStyleDasDivs();
+  });
+
+  function AlteraStyleDasDivs() {
+    $("#sta").each(function () {
+      if ($(this).text() == "Pendente")
+        $(this).css("or", "red");
+      else
+        if ($(this).text() == "Concluido")
+          $(this).css("or", "orange");
+        else
+          if ($(this).text() == "Em análise")
+            $(this).css("or", "blue");
+    });
+  }
+
+
+
 </script>
