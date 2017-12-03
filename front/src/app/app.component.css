@@ -23,6 +23,10 @@ nav {
     width: 20px;
 }
 
+#closeMenu {
+    height: 20px;
+}
+
 #cadastro {
     font-size: 16px;    
     color: #a7a7a7;
