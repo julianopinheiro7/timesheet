@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TarefasService} from '../services/tarefas.service';
+import { TarefasService } from '../services/tarefas.service';
 
 @Component({
   selector: 'app-tarefas-lista',
@@ -9,8 +9,8 @@ import { TarefasService} from '../services/tarefas.service';
 })
 export class TarefasListaComponent implements OnInit {
 
-  private tarefas : any
-  
+  private tarefas: any
+
   constructor(private service: TarefasService) { }
 
   ngOnInit() {
@@ -22,7 +22,7 @@ export class TarefasListaComponent implements OnInit {
   }
 
   excluir(id: string) {
-    if(confirm('Deseja realmente excluir esta tarefa?')) {
+    if (confirm('Deseja realmente excluir esta tarefa?')) {
       this.service.excluir(id).subscribe(
         () => this.atualizarLista(),
         erro => console.error(erro)
