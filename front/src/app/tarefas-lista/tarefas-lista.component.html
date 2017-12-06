@@ -1,7 +1,8 @@
 <div class="container" id="tarefas">
 
   <div *ngFor="let tarefa of tarefas">
-    <div class="-sm-12" id="linha">
+    <div id="linha">
+      
       <div id="linha1">
         <span class="col" id="spanChamado">Nº Chamado:</span>
         <span id="numChamado">{{tarefa.chamado}}</span>
@@ -30,6 +31,10 @@
         </div>
       </div>
       <div>
+        <span class="spanTarefa col">Descrição:</span>
+        <span class="dadosTarefa col">{{tarefa.descricao}}</span>
+      </div>
+      <div>
         <span class="spanTarefa col">Data da Tarefa:</span>
         <span class="dadosTarefa col">{{tarefa.data | date: 'dd/MM/yyyy'}}</span>
         <span class="spanTarefa col" id="solicitante">Solicitante:</span>
@@ -40,20 +45,14 @@
         <span class="dadosTarefa col">{{tarefa.projeto.nomeProjeto}}</span>
         <span class="spanTarefa col" id="tempoPrevisto">Tempo Previsto:</span>
         <span class="dadosTarefa col">{{tarefa.tempo}} Horas</span>
-      </div>
-      <div>
-        <span class="spanTarefa col">Descrição:</span>
-        <span class="dadosTarefa col">{{tarefa.descricao}}</span>
         <div style="float: right">
-            <span class="spanTarefa col">Status:</span>
-            <span [style.color]="tarefa.status.nomeStatus == 'Pendente' ? 'orange' : 
-            tarefa.status.nomeStatus == 'Concluido' ? 'green' : 
-            tarefa.status.nomeStatus == 'Em análise' ? '#03A9F4' : 'black'"
-            class="dadosTarefa col" id="sta">{{tarefa.status.nomeStatus}}</span>
-          </div>
+          <span class="spanTarefa col">Status:</span>
+          <span [style.color]="tarefa.status.nomeStatus == 'Pendente' ? 'orange' : 
+          tarefa.status.nomeStatus == 'Concluido' ? 'green' : 
+          tarefa.status.nomeStatus == 'Em análise' ? '#03A9F4' : 'black'"
+          class="dadosTarefa col" id="sta">{{tarefa.status.nomeStatus}}</span>
+        </div>
       </div>
-      
-
     </div>
   </div>
 
