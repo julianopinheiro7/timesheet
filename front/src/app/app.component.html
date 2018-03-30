@@ -1,85 +1,81 @@
 <nav class="nav">
-  <div>
-    <a id="exibir" href="#">
-      <img id="menuBurger" src="assets/img/menu.png">
-    </a>
-    <a href="/home">
-      <img id="logo" src="assets/img/logoTimesheet.png">
-    </a>
+
+  <div id="divNavbar">
+
+    <div class="dropdown">
+      <i class="material-icons dropbtn">&#xE5C3;</i>
+
+      <div class="dropdown-content">
+
+        <div id="div-user">
+          <label id="name-user">Juliano Pinheiro</label>
+        </div>
+
+        <div id="div-card-apps">
+
+          <div class="div-apps">
+            <a routerLink="/projetos/novo" class="lnkOpcoes">
+              <img src="assets/img/projeto.png" class="img-icons">
+              <label class="label-icons">Projetos</label>
+            </a>
+          </div>
+
+          <div class="div-apps">
+            <a routerLink="/tarefas/novo" class="lnkOpcoes">
+              <i class="material-icons iconSpace">&#xE862;</i>
+              <label>Tarefas</label>
+            </a>
+          </div>
+
+          <!-- <div class="div-apps">
+            <a routerLink="/usuarios/novo" class="lnkOpcoes">
+              <i class="material-icons iconSpace">&#xE7FD;</i>
+              <label>Novo Usuario</label>
+            </a>
+          </div> -->
+
+          <div class="div-apps">
+            <a routerLink="/status/novo" class="lnkOpcoes">
+              <i class="material-icons iconSpace">&#xE862;</i>
+              <label>Status</label>
+            </a>
+          </div>
+
+          <div id="div-config-out">
+              <div class="div-logout">
+                  <a routerLink="/#">
+                    <img src="assets/img/config.png" class="spaceRight">
+                    <label>Configurações</label>
+                  </a>
+              </div>
+              <div class="div-logout border-left">
+                  <a routerLink="/home">
+                    <img src="assets/img/log-out.png" class="spaceRight">
+                    <label>Sair</label>
+                  </a>
+              </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div id="divLogo">
+        <a routerLink="/home">
+          <img src="assets/img/logo.png" id="logo">
+        </a>
+    </div>
+
+
   </div>
 </nav>
-
-<div id="MeuDiv">
-  <div id="closeMenu">
-    <a id="esconder" href="#" style="float: right">
-      <img src="assets/img/close.png" style="width: 15px;">
-    </a>
-  </div>
-  <!-- Menu -->
-  <ul class="list-group">
-    <li class="list-group-item">
-      <a href="/home" class="lnkOpcoes">
-        <i class="material-icons iconSpace">&#xE88A;</i>Home</a>
-    </li>
-    <li class="list-group-item">
-      <a href="/tarefas" class="lnkOpcoes">
-        <i class="material-icons iconSpace">&#xE862;</i>Tarefas</a>
-    </li>
-    <li class="list-group-item">
-      <a href="/projetos" class="lnkOpcoes">
-        <i class="material-icons iconSpace">&#xE85D;</i>Projetos</a>
-    </li>
-    <li class="list-group-item">
-      <a href="/status" class="lnkOpcoes">
-        <i class="material-icons iconSpace">&#xE86C;</i>Status</a>
-    </li>
-    <li class="list-group-item">
-      <a href="/usuarios" class="lnkOpcoes">
-        <i class="material-icons iconSpace">&#xE7FD;</i>Usuarios</a>
-    </li>
-    <li class="list-group-item">
-      <a href="/home" class="lnkOpcoes">
-        <i class="material-icons iconSpace">&#xE8B8;</i>Configurações</a>
-    </li>
-  </ul>
-</div>
-
-<div class="">
-  <ul class="menu">
-    <li>
-      <a id="cadastro" href="#">
-        <i class="material-icons iconSpace">navigate_next</i>Cadastro</a>
-      <ul style="width: 1280px; top: 0; left: 118px;">
-        <li>
-          <a routerLink="/tarefas/novo" class="lnkOpcoes">
-            <i class="material-icons iconSpace">&#xE862;</i>Nova Tarefa
-          </a>
-        </li>
-        <li>
-          <a routerLink="/projetos/novo" class="lnkOpcoes">
-            <i class="material-icons iconSpace">&#xE85D;</i>Novo Projeto
-          </a>
-        </li>
-        <li>
-          <a routerLink="/status/novo" class="lnkOpcoes">
-            <i class="material-icons iconSpace">&#xE862;</i>Novo Status
-          </a>
-        </li>
-        <li>
-          <a routerLink="/usuarios/novo" class="lnkOpcoes">
-            <i class="material-icons iconSpace">&#xE7FD;</i>Novo Usuario
-          </a>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</div>
 
 <router-outlet></router-outlet>
 
 <script>
   $(document).ready(function () {
-    $("a").click(function (event) {
+    $("window").click(function (event) {
       var link = $(this);
       if (link.attr("id").match("esconder"))
         $("#MeuDiv").hide("slow");
@@ -87,6 +83,6 @@
         $("#MeuDiv").show("slow");
       event.preventDefault();
     });
-  }) 
-  
+  })
+
 </script>

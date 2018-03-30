@@ -1,3 +1,14 @@
 #marca {
-    margin-top: 250px;
+    font-size: 22px;    
+}
+
+#board {
+    display: flex;
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo-home {
+    width: 280px;
 }
