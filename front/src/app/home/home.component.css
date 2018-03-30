@@ -1,10 +1,10 @@
 #marca {
-    font-size: 22px;    
+    font-size: 18px;    
 }
 
 #board {
     display: flex;
-    height: 600px;
+    height: 500px;
     justify-content: center;
     align-items: center;
 }

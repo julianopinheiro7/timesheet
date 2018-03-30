@@ -2,11 +2,6 @@
     margin-top: 25px;
 }
 
-#tbProjetos {
-    margin-top: 50px;
-    width: 950px;
-}
-
 #tbDescricao {
     width: 300px;
 }
@@ -30,12 +25,12 @@ table , tr {
 }
 
 table , th {
-    font-size: 16px;
+    font-size: 14px;
     color: #25c5b6;        
 }
 
 table , td {
-    font-size: 15px;
+    font-size: 14px;
     color: #757575;
     font-family: 'Varela Round', sans-serif; 
 }
@@ -50,4 +45,18 @@ table thead th {
 
 thead {    
     font-family: 'Varela Round', sans-serif;
+}
+
+.container-form {
+    width: 90%;
+    max-width: 900px;
+    padding: 20px;
+    margin: 80px auto;
+    background: #fff;
+    -webkit-box-shadow: 0px 0px 3px grey;
+    box-shadow: 0px 0px 3px grey;
+}
+
+.center {
+    text-align: center;
 }

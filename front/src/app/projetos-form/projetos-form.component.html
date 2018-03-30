@@ -1,30 +1,31 @@
-<div class="container" style="margin-top: 80px;">
-
+<div class="container-form">
   <form #projetosForm="ngForm" (ngSubmit)="enviar()">
 
-    <div class="row" style="margin-top: 30px;">
-      <div class="form-group col-sm-4">
-        <label for="descricao" class="lblCadastro">Nome do Projeto</label>
+    <label class="lblTitulo">Projetos</label>
+
+    <div class="row">
+      <div class="form-group form-projeto">
+        <label for="descricao" class="lblCadastro">Nome do Projeto:</label>
         <input id="descricao" name="descricao" type="text" class="validate" [(ngModel)]="model.nomeProjeto">
       </div>
     </div>
 
     <div class="row">
-      <div class="form-group col-sm-2">
-        <label for="data_solicitacao" class="lblCadastro">Data da Solicitação</label>
-        <input id="data_solicitacao" name="data_solicitacao" type="date" class="form-control inputCadastro" [(ngModel)]="model.dataSolicitacao">
+      <div class="form-group form-datas form-space-right">
+        <label for="data_solicitacao" class="lblCadastro">Data da Solicitação:</label>
+        <input id="data_solicitacao" name="data_solicitacao" type="date" class="form-control inputCadastro font-size-date" [(ngModel)]="model.dataSolicitacao">
       </div>
 
-      <div class="form-group col-sm-2">
-          <label for="data_conclusao" class="lblCadastro">Data da Conclusão</label>
-          <input id="data_conclusao" name="data_conclusao" type="date" class="form-control inputCadastro" [(ngModel)]="model.dataConclusao">
-        </div>
+      <div class="form-group form-datas">
+        <label for="data_conclusao" class="lblCadastro">Data da Conclusão:</label>
+        <input id="data_conclusao" name="data_conclusao" type="date" class="form-control inputCadastro font-size-date" [(ngModel)]="model.dataConclusao">
+      </div>
     </div>
 
     <div class="row">
-      <div class="form-group col-sm-2">
-        <label for="quantidadeHoras" class="lblCadastro">Quantidade de Horas</label>
-        <input id="quantidadeHoras" name="quantidadeHoras" type="text" class="validate" [(ngModel)]="model.quantidadeHoras">
+      <div class="form-group form-horas">
+        <label for="quantidadeHoras" class="lblCadastro ">Quantidade de Horas:</label>
+        <input id="quantidadeHoras" name="quantidadeHoras" type="text" class="validate font-size-date" [(ngModel)]="model.quantidadeHoras">
       </div>
     </div>
 
@@ -35,12 +36,15 @@
       <div class="text-center">
         <a href="/projetos" class="btn btn-link btnCadastro">Consultar</a>
       </div>
-      <div id="sucess" style="display: none">
-          <div class="msgSucess">Registro gravado com sucesso!</div>
-      </div>
-      <div id="fail" style="display: none">
-          <div class="msgFail">Ocorreu um erro, tente novamente!</div>
-      </div>
+    </div>
+
+    <div class="row center" >
+        <div id="sucess" style="display: none">
+            <div class="msgSucess">Registro gravado com sucesso!</div>
+          </div>
+          <div id="fail" style="display: none">
+            <div class="msgFail">Ocorreu um erro, tente novamente!</div>
+          </div>
     </div>
 
   </form>

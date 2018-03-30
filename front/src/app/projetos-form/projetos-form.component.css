@@ -1,3 +1,7 @@
+body {
+    font-family: 'Varela Round', sans-serif !important;
+}
+
 input {
     font-size: 18px;
 }
@@ -13,25 +17,49 @@ input {
     margin-left: 0px;
 }
 
-#descricao {
-    height: 50px;
+#quantidadeHoras {
+    width: 125px;
+}
+
+.container-form {
+    width: 90%;
+    max-width: 700px;
+    padding: 20px;
+    margin: 80px auto;
+    background: #fff;
+    -webkit-box-shadow: 0px 0px 3px grey;
+    box-shadow: 0px 0px 3px grey;
 }
 
 .lblCadastro {
-    font-size: 14px;
+    font-size: 12px;
+    font-weight: normal;
+    color: #6d7275;
+}
+
+.lblTitulo {
+    font-size: 18px;
+    width: 100%;
+    border-bottom: 1px solid #eae9e9;
+    line-height: 4rem;
+    color: #2f3e46;
+    font-weight: normal;
 }
 
 .btnCadastro {
-    font-size: 16px;
-    padding: 10px 39px;
+    font-size: 13px;
+    padding: 5px 30px;
     text-decoration: none;
-    color: rgb(143, 141, 141) !important; ;
+    color: rgb(143, 141, 141) !important;
     border: 1px solid #bdbdbd;
-    border-radius: 5px;  
+    border-radius: 5px;
+    text-transform: capitalize;
+    margin: 0 5px 0 0;
+    width: 125px;
 }
 
 .btnCadastro:hover {
-    color: #1dbec3 !important;
+    color: #0b1718 !important;
     border: 1px solid #1dbec3;
 }
 
@@ -39,7 +67,6 @@ input {
     font-size: 15px;
     color: #1dbec3;
     text-align: center;
-    padding: 10px;
     font-weight: bold;
     margin-top: 10px;
     font-family: 'Varela Round', sans-serif;
@@ -47,10 +74,48 @@ input {
 
 .msgFail {    
     font-size: 15px;
-    color: #c31d33;
+    color: #940d1f;
     text-align: center;
-    padding: 10px;
     font-weight: bold;
     margin-top: 10px;
     font-family: 'Varela Round', sans-serif;
 }
+
+.form-projeto {
+    width: 100%;
+}
+
+.form-datas {
+    width: 49%;
+}
+
+.form-horas {
+    width: 25%;
+}
+
+.form-space-right {
+    margin-right: 10px;
+}
+
+.row {
+    margin: 15px 0;
+}
+
+.form_group {
+    border-bottom: 1px solid #bdbdbd;
+}
+
+.font-size-date {
+    font-size: 14px;
+    color: #222537;
+}
+
+.center {
+    text-align: center;
+}
+
+
+
+
+
+			
