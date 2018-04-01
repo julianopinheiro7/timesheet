@@ -2,6 +2,11 @@
     margin-top: 25px;
 }
 
+#tbProjetos {
+    line-height: 2.5;
+    width: 100%;
+}
+
 #tbDescricao {
     width: 300px;
 }
@@ -13,6 +18,7 @@
 
 .btnLink {
     padding: 0 15px !important;
+    vertical-align: text-top;
 }
 
 .btnOp:hover {
@@ -51,10 +57,8 @@ thead {
     width: 90%;
     max-width: 900px;
     padding: 20px;
-    margin: 80px auto;
-    background: #fff;
-    -webkit-box-shadow: 0px 0px 3px grey;
-    box-shadow: 0px 0px 3px grey;
+    margin: 30px auto;
+    background: #fff;    
 }
 
 .center {

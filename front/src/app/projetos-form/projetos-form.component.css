@@ -21,31 +21,6 @@ input {
     width: 125px;
 }
 
-.container-form {
-    width: 90%;
-    max-width: 700px;
-    padding: 20px;
-    margin: 80px auto;
-    background: #fff;
-    -webkit-box-shadow: 0px 0px 3px grey;
-    box-shadow: 0px 0px 3px grey;
-}
-
-.lblCadastro {
-    font-size: 12px;
-    font-weight: normal;
-    color: #6d7275;
-}
-
-.lblTitulo {
-    font-size: 18px;
-    width: 100%;
-    border-bottom: 1px solid #eae9e9;
-    line-height: 4rem;
-    color: #2f3e46;
-    font-weight: normal;
-}
-
 .btnCadastro {
     font-size: 13px;
     padding: 5px 30px;
@@ -61,6 +36,17 @@ input {
 .btnCadastro:hover {
     color: #0b1718 !important;
     border: 1px solid #1dbec3;
+}
+
+.container-form {
+    width: 90%;
+    max-width: 700px;
+    padding: 20px;
+    margin: 80px auto;
+    background: #fff;
+    -webkit-box-shadow: 0px 0px 3px grey;
+    box-shadow: 0px 0px 3px grey;
+    z-index: 9999 !important;
 }
 
 .msgSucess {    
@@ -93,21 +79,12 @@ input {
     width: 25%;
 }
 
-.form-space-right {
-    margin-right: 10px;
-}
-
-.row {
-    margin: 15px 0;
-}
-
 .form_group {
     border-bottom: 1px solid #bdbdbd;
 }
 
-.font-size-date {
-    font-size: 14px;
-    color: #222537;
+.row {
+    margin: 15px 0;
 }
 
 .center {

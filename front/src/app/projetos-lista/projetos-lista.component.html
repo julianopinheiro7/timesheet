@@ -1,7 +1,8 @@
 <div class="container" id="projetos">
-
+ 
   <div class="container-form">
-    <table class="table" id="tbProjetos">
+
+    <table class="table-striped" id="tbProjetos">
       <thead>
         <th>Nome do Projeto</th>
         <th>Data Solicitação</th>
@@ -15,7 +16,7 @@
           <td>{{pro.nomeProjeto}}</td>
           <td>{{pro.dataSolicitacao | date: 'dd/MM/yyyy'}}</td>
           <td>{{pro.dataConclusao | date: 'dd/MM/yyyy'}}</td>
-          <td  class="center">{{pro.quantidadeHoras}}</td>
+          <td class="center">{{pro.quantidadeHoras}}</td>
           <td class="sizeOp">
             <a class="btn-flat btnLink" [routerLink]="['/projetos', pro._id]">
               <i class="material-icons btnOp">edit</i>
@@ -29,5 +30,5 @@
         </tr>
       </tbody>
     </table>
-</div>
+  </div>
 </div>

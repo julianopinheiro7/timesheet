@@ -1,3 +1,43 @@
 body {
     font-family: 'Varela Round', sans-serif !important;
 }
+
+.lblTitulo {
+    font-size: 18px;
+    width: 100%;
+    border-bottom: 1px solid #eae9e9;
+    line-height: 4rem;
+    color: #2f3e46;
+    font-weight: normal;
+}
+
+.lblCadastro {
+    font-size: 12px;
+    font-weight: normal;
+    color: #6d7275;
+}
+
+.font-size-date {
+    font-size: 14px !important;
+    color: #222537;
+}
+
+.form-space-right {
+    margin-right: 10px;
+}
+
+.size {
+    width: 100%;
+}
+
+.size50 {
+    width: 50%;
+}
+
+.icons {
+    width: 30px;
+}
+
+
+
+

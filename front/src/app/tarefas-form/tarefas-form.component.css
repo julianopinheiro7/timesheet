@@ -1,16 +1,11 @@
 select {
     border: 1px solid #fff;
     border-bottom: 1px solid #bdbdbd;
-    height: 41px !important;
+    height: 33px !important;
 }
 
-.lblCadastro {
-    font-size: 14px;
-}
-
-.inputCadastro {
+input {
     font-size: 18px;
-    color: black;
 }
 
 .center {
@@ -51,9 +46,82 @@ select {
     font-family: 'Varela Round', sans-serif;
 }
 
+.container-form {
+    width: 90%;
+    max-width: 700px;
+    padding: 20px;
+    margin: 60px auto;
+    background: #fff;
+    -webkit-box-shadow: 0px 0px 3px grey;
+    box-shadow: 0px 0px 3px grey;
+}
+
+.btnCadastro {
+    font-size: 13px;
+    padding: 5px 30px;
+    text-decoration: none;
+    color: rgb(143, 141, 141) !important;
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
+    text-transform: capitalize;
+    margin: 0 5px 0 0;
+    width: 125px;
+}
+
+.btnCadastro:hover {
+    color: #0b1718 !important;
+    border: 1px solid #1dbec3;
+}
+
+
 #titulo {
     font-size: 30px;    
     margin-bottom: 20px;
     color: #d0cfcf;    
 }
 
+#chamado {
+    width: 72%;
+}
+
+#data_tarefa {
+    width: 40%;
+}
+
+#tempo {
+    width: 65%;
+}
+
+#status {
+    width: 39%;
+}
+
+#btnTarefa {
+    margin-top: 15px;
+    margin-left: 0px;
+}
+
+.projetos {
+    font-size: 14px;
+}
+
+.form-tarefas {
+    width: 100%;
+}
+
+.row {
+    margin: 0 !important;
+    width: 100% !important;
+}
+
+.div-chamado {
+    width: 20%;
+}
+
+.div-dtTarefa {
+    width: 69%;
+}
+
+.div-projeto {
+    width: 48%;
+}
