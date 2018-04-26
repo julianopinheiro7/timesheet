@@ -45,7 +45,7 @@
 
       <div class="form-group div-dtTarefa">
         <label for="status" class="lblCadastro">Status:</label>
-        <select id="status" name="status" class="form-control inputCadastro" [(ngModel)]="model.status">
+        <select id="status" name="status" class="form-control inputCadastro projetos" [(ngModel)]="model.status">
           <option *ngFor="let sta of status | async" [ngValue]="sta._id">{{sta.nomeStatus}}</option>
         </select>
       </div>
